@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sincronização</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+</head>
+<body>
+    <div class="form-group">
+		<label for="questionario">URL do questionário</label>
+		<input type="text" class="form-control" id="questionario">
+		<br/>
+		<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
+		<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+		</a>
+		<a href="#" class="btn btn-info btn-lg" id="btn_enviarURLQuestionario">
+		<span class="glyphicon glyphicon-save"></span> Salvar
+		</a>
+	</div>
+    
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Include SmartWizard JavaScript source -->
+    <script type="text/javascript" src="js/jquery.smartWizard.min.js"></script>
+
+    <script type="text/javascript">
+	 $(document).ready(function(){
+	 
+	 $("#btn_enviarURLQuestionario").on("click", function() {
+		var teste = $("#questionario").val();
+		sessionStorage.setItem("SessionTeste",teste);
+		alert("Questionário salvo");
+		});
+		
+		$("#btn_voltar").on("click", function() {
+			location.reload();
+		});
+		
+	 });
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sincronização</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+</head>
+<body>
+    <iframe name="questionario-frame" src="" width="960" height="700" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+    <div>
+		<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
+		<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+		</a>
+	</div>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Include SmartWizard JavaScript source -->
+    <script type="text/javascript" src="js/jquery.smartWizard.min.js"></script>
+
+	<script type="text/javascript">
+	 $(document).ready(function(){
+	 
+		var teste = sessionStorage.getItem("SessionTeste");
+		///alert(teste);
+		window.open(teste,"questionario-frame");			
+		
+		$("#btn_voltar").on("click", function() {
+			location.reload();
+		});
+	 });
+	</script>
+   
+</body>
+</html>

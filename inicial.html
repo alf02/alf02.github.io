@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instruções para instalação</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container" id="tipo">
+       <h1>Escolha uma opção</h1></br>
+	   <h4>Caso seja a primeira vez de uso, escolha "Instalar" para realizar a instalação dos programas necessários para a gravação do teste.
+	   </br></br></br>
+	   Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.</h4>
+	   
+		</br></br></br></br>
+	   	   
+		<a href="#" class="btn btn-info btn-lg" id="btn_computador">
+		<span class="glyphicon glyphicon-blackboard"></span> Computador
+		</a>
+			</br></br>
+		<a href="#" class="btn btn-info btn-lg" id="btn_smartphone">
+		<span class="glyphicon glyphicon-phone"></span> Smartphone
+		</a>
+		
+    </div>
+
+   <script>
+		$(document).ready( function() {
+								
+			$("#btn_computador").on("click", function() {
+				$("#content").load("PC.html");
+			});
+			
+			$("#btn_smartphone").on("click", function() {
+				$("#content").load("smartphone.html");
+			});
+		});
+	</script>
+</body>
+</html>
