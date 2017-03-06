@@ -312,6 +312,89 @@
             </div>
 			</div>
 		</div>
+		<div id="configQuestionario" class="hide">
+			<div class="form-group">
+				<label for="questionario">URL do questionário</label>
+				<input type="text" class="form-control" id="questionario">
+				<br/>
+				<a href="#" class="btn btn-info btn-lg" id="btn_voltarQuestionario">
+				<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+				</a>
+				<a href="#" class="btn btn-info btn-lg" id="btn_enviarURLQuestionario">
+				<span class="glyphicon glyphicon-save"></span> Salvar
+				</a>
+			</div>
+		
+		</div>
+		<div id="iniciarGravacao" class="hide">
+			<div id="smartwizard_iniciarGravacao">
+            <ul>
+                <li><a href="#step-1">Passo 1<br /></a></li>
+                <li><a href="#step-2">Passo 2<br /></a></li>
+                <li><a href="#step-3">Passo 3<br /></a></li>
+                <li><a href="#step-4">Passo 4<br /></a></li>				
+            </ul>
+            
+            <div>
+               
+				<div id="step-1" class="">
+					<h3><b>No computador:</b></h3></br>
+					<ul>
+					<h4><li>Abra o "CamStudio</li></h4></br>
+					<h4><li>Clique em "Region"</li></h4></br>					
+					<img src="img/CamStudioSync1.png" alt="Instalar" width="460" height="450">														
+					</ul>  
+                </div>
+				<div id="step-2" class=""></br>                
+					<ul>
+					<h4><li>Clique no botão de "Gravar" </li></h4></br>					
+					<img src="img/CamStudioSync2.png" alt="Instalar" width="460" height="450"></br></br>																												
+					</ul>                  
+                </div>
+				<div id="step-3" class=""></br>                
+					<ul>					
+					<h4><li>Selecione a região do espelhamento do Smartphone no site do AirMore</li></h4></br>					
+					<img src="img/CamStudioSync3.png" alt="Instalar" width="800" height="450">
+					</ul>                 
+                </div>
+				<div id="step-4" class=""></br>                
+					<ul>
+					<h4><li>A gravação está iniciada e pronta para realizar o teste.</li></h4></br>										
+					</ul>                  
+                </div>
+            </div>
+			</div>
+		</div>
+		<div id="fimGravacao" class="hide">
+			 <div id="smartwizard_fimGravacao">
+            <ul>
+                <li><a href="#step-1">Passo 1<br /></a></li>
+                <li><a href="#step-2">Passo 2<br /></a></li>
+                <li><a href="#step-3">Passo 3<br /></a></li>                
+            </ul>            
+            <div>               
+				<div id="step-1" class="">
+					<h3><b>No computador:</b></h3></br>
+					<ul>					
+					<h4><li>No CamStudio, Clique em "Stop"</li></h4></br>					
+					<img src="img/finalizarGravacao1.png" alt="Instalar" width="460" height="450">														
+					</ul>  
+                </div>
+				<div id="step-2" class=""></br>                
+					<ul>
+					<h4><li>Selecione o local e o nome para salvar o arquivo da gravação.</li></h4></br>					
+					<img src="img/finalizarGravacao2.png" alt="Instalar" width="860" height="540"></br></br>																												
+					</ul>                  
+                </div>				
+				<div id="step-3" class=""></br>                
+					<ul>
+					<h4><li>A gravação está finalizada e pronta para ser analisada.</li></h4></br>										
+					</ul>                  
+                </div>
+            </div>
+			</div>
+		</div>
+		
 	</div>
     
     <!-- /.container -->
@@ -327,114 +410,66 @@
 		
 			$("#btn_computador").on("click", function() {
 				$("#textoInicial").attr("class", "row");
+				
 				openDiv("PC");
 			});
 			
 			$("#btn_voltar").on("click", function() {
 				$("#textoInicial").attr("class", "row");
+				
+				openDiv("inicial");				
+			});
+			
+			$("#btn_voltarQuestionario").on("click", function() {
+				$("#textoInicial").attr("class", "row");
+				
 				openDiv("inicial");				
 			});
 			
 			$("#btn_instalarComputador").on("click", function() {
 				$("#textoInicial").attr("class", "hide");
+				
 				openDiv("instalacaoPC");				
 											
-				 $("#smartwizard_instalacaoPC").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
-				   if(stepPosition === 'first'){
-					   $("#prev-btn").addClass('disabled');
-				   }else if(stepPosition === 'final'){
-					   $("#next-btn").addClass('disabled');
-				   }else{
-					   $("#prev-btn").removeClass('disabled');
-					   $("#next-btn").removeClass('disabled');
-				   }
-				});
-				
-				// Toolbar extra buttons
-				var btnFinish = $('<button></button>').text('Voltar')
-												 .addClass('btn btn-info')
-												 .on('click', function(){ window.open ('index.html','_self',false); });
-				var btnCancel = $('<button></button>').text('Reiniciar')
-												 .addClass('btn btn-danger')
-												 .on('click', function(){ $('#smartwizard_instalacaoPC').smartWizard("reset"); });                         
-												 
-				var btnProximo = $('<button></button>').text('Sincronizar')
-												 .addClass('btn btn-success')
-												 .on('click', function(){ openDiv("sincronizacao");startWizardSincronizacao();});								 
-				
-				
-				// Smart Wizard
-				$('#smartwizard_instalacaoPC').smartWizard({ 
-						selected: 0, 
-						theme: 'default',
-						transitionEffect:'fade',
-						toolbarSettings: {toolbarPosition: 'top',
-										  toolbarExtraButtons: [btnFinish, btnCancel,btnProximo]
-										}
-					 });
-											 
-				
-				
+				startWizardInstalacaoPC();
 			});
 			
-			// External Button Events
-				$("#reset-btn").on("click", function() {
-					// Reset wizard
-					$('#smartwizard_instalacaoPC').smartWizard("reset");
-					return true;
-				});
+			
+												
+			$("#btn_sincronizar").on("click", function() {
+				$("#textoInicial").attr("class", "hide");
+				openDiv("sincronizacao");
 				
-				$("#prev-btn").on("click", function() {
-					// Navigate previous
-					$('#smartwizard_instalacaoPC').smartWizard("prev");
-					return true;
-				});
+				startWizardSincronizacao();  
+			});
+			
+			$("#btn_configQuestionario").on("click", function() {
 				
-				$("#next-btn").on("click", function() {
-					// Navigate next
-					$('#smartwizard_instalacaoPC').smartWizard("next");
-					return true;
-				});
+				$("#textoInicial").attr("class", "hide");
 				
-				$("#theme_selector").on("change", function() {
-					// Change theme
-					$('#smartwizard_instalacaoPC').smartWizard("theme", $(this).val());
-					return true;
-				});
+				openDiv("configQuestionario");
+			});
+			
+			$("#btn_iniciarGravacao").on("click", function() {
 				
-				$("#btn_sincronizar").on("click", function() {
-					$("#textoInicial").attr("class", "hide");
-					openDiv("sincronizacao");
-					
-					startWizardSincronizacao();  
-				});
+				$("#textoInicial").attr("class", "hide");
 				
-				 $("#reset-btn").on("click", function() {
-                // Reset wizard
-                $('#smartwizard_instalacaoSmartphone').smartWizard("reset");
-                return true;
-            });
-            
-            $("#prev-btn").on("click", function() {
-                // Navigate previous
-                $('#smartwizard_instalacaoSmartphone').smartWizard("prev");
-                return true;
-            });
-            
-            $("#next-btn").on("click", function() {
-                // Navigate next
-                $('#smartwizard_instalacaoSmartphone').smartWizard("next");
-                return true;
-            });
-            
-            $("#theme_selector").on("change", function() {
-                // Change theme
-                $('#smartwizard_instalacaoSmartphone').smartWizard("theme", $(this).val());
-                return true;
-            });
-            
+				openDiv("iniciarGravacao");
+				
+				startWizardIniciarGravacao();
+			});
+				
 			$("#btn_siteairmore").on("click", function() {
 				openInNewTab('http://airmore.net');
+			});
+			
+			
+			 $("#btn_enviarURLQuestionario").on("click", function() {
+				var teste = $("#questionario").val();
+				sessionStorage.setItem("SessionTeste",teste);
+				alert("Questionário salvo");
+				$("#textoInicial").attr("class", "row");
+				openDiv("inicial");
 			});
 			
             function openInNewTab(url) {
@@ -446,6 +481,9 @@
 				$("#PC").attr("class", "hide");
 				$("#instalacaoPC").attr("class", "hide");
 				$("#sincronizacao").attr("class", "hide");
+				$("#configQuestionario").attr("class", "hide");
+				$("#iniciarGravacao").attr("class", "hide");
+				$("#fimGravacao").attr("class", "hide");
 				
 				$("#"+div).attr("class", "col-lg-12");
 			};
@@ -481,6 +519,85 @@
 											  toolbarExtraButtons: [btnFinish, btnCancel]
 											}
 					 });
+			};
+			
+			function startWizardInstalacaoPC(){
+				$("#smartwizard_instalacaoPC").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
+				   if(stepPosition === 'first'){
+					   $("#prev-btn").addClass('disabled');
+				   }else if(stepPosition === 'final'){
+					   $("#next-btn").addClass('disabled');
+				   }else{
+					   $("#prev-btn").removeClass('disabled');
+					   $("#next-btn").removeClass('disabled');
+				   }
+				});
+				
+				// Toolbar extra buttons
+				var btnFinish = $('<button></button>').text('Voltar')
+												 .addClass('btn btn-info')
+												 .on('click', function(){ window.open ('index.html','_self',false); });
+				var btnCancel = $('<button></button>').text('Reiniciar')
+												 .addClass('btn btn-danger')
+												 .on('click', function(){ $('#smartwizard_instalacaoPC').smartWizard("reset"); });                         
+												 
+				var btnProximo = $('<button></button>').text('Sincronizar')
+												 .addClass('btn btn-success')
+												 .on('click', function(){ openDiv("sincronizacao");startWizardSincronizacao();});								 
+				
+				
+				// Smart Wizard
+				$('#smartwizard_instalacaoPC').smartWizard({ 
+						selected: 0, 
+						theme: 'default',
+						transitionEffect:'fade',
+						toolbarSettings: {toolbarPosition: 'top',
+										  toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+										}
+				 });
+			};
+			
+			function startWizardIniciarGravacao(){
+				$("#smartwizard_iniciarGravacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+               //alert("You are on step "+stepNumber+" now");
+               if(stepPosition === 'first'){
+                   $("#prev-btn").addClass('disabled');
+               }else if(stepPosition === 'final'){
+                   $("#next-btn").addClass('disabled');
+               }else{
+                   $("#prev-btn").removeClass('disabled');
+                   $("#next-btn").removeClass('disabled');
+               }
+            });
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Terminar')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ window.open ('index.html','_self',false); });
+            var btnCancel = $('<button></button>').text('Reiniciar')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ $('#smartwizard_iniciarGravacao').smartWizard("reset"); });                         
+										
+			var btnProximo = $('<button></button>').text('Finalizar')
+                                             .addClass('btn btn-success')
+                                             .on('click', function(){ openDiv("fimGravacao"); });                         
+            
+            
+            
+            // Smart Wizard
+            $('#smartwizard_iniciarGravacao').smartWizard({ 
+                    selected: 0, 
+                    theme: 'default',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'top',
+                                      toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+                                    }
+				});
+                                         
+			};
+			
+			function startWizardFimGravacao(){
+				
 			};
 		});
 	</script>
