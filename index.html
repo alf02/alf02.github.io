@@ -55,10 +55,10 @@
                         <a href="#" id="load_inicio">Início</a>
                     </li>
                     <li>
-                        <a href="#" id="load_instalacao">Instalar</a>
+                        <a href="#" id="load_PC">Computador</a>
                     </li>
                     <li>
-                        <a href="#" id="load_sincronizacao">Sincronizar</a>
+                        <a href="#" id="load_smartphone">Smartphone</a>
                     </li>
                     
                 </ul>
@@ -107,7 +107,7 @@
 			<a href="#" class="btn btn-info btn-lg" id="btn_iniciarGravacao">
 			<span class="glyphicon glyphicon-facetime-video"></span> Iniciar gravação
 			</a>
-			<a href="#" class="btn btn-info btn-lg" id="btn_finalizarGravacao">
+			<a href="#" class="btn btn-info btn-lg" id="btn_fimGravacao">
 			<span class="glyphicon glyphicon-stop"></span> Finalizar gravação
 			</a>
 			<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
@@ -190,7 +190,7 @@
 			</div>
 		</div>
 		<div id="sincronizacao" class="hide">
-			<div id="smartwizard_instalacaoSmartphone">
+			<div id="smartwizard_sincronizacao">
 				 <ul>
                 <li><a href="#step-1">Passo 1<br /></a></li>
                 <li><a href="#step-2">Passo 2<br /></a></li>
@@ -395,6 +395,94 @@
 			</div>
 		</div>
 		
+		<div class="hide" id="smartphone">
+			<a href="#" class="btn btn-info btn-lg" id="btn_instalarSmartphone">
+			<span class="glyphicon glyphicon-cog"></span> Instalar no smartphone
+			</a>
+			</br></br>
+			
+			<a href="#" class="btn btn-info btn-lg" id="btn_sincronizarSmartphone">
+			<span class="glyphicon glyphicon-refresh"></span> Sincronizar
+			</a>		
+			
+			<a href="#" class="btn btn-info btn-lg" id="btn_responderQuestionario">
+			<span class="glyphicon glyphicon-list-alt"></span> Responder questionário
+			</a>		
+			
+			<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
+			<span class="glyphicon glyphicon-chevron-left"></span> Voltar
+			</a>
+		</div>
+		
+		<div class="hide" id="instalacaoSmartphone">
+			<div id="smartwizard_smartphone">
+				<ul>
+					<li><a href="#step-1">Passo 1<br /></a></li>
+					<li><a href="#step-2">Passo 2<br /></a></li>
+					<li><a href="#step-3">Passo 3<br /></a></li>
+					<li><a href="#step-4">Passo 4<br /></a></li>                
+					<li><a href="#step-5">Passo 5<br /></a></li>
+					<li><a href="#step-6">Passo 6<br /></a></li>
+					<li><a href="#step-7">Passo 7<br /></a></li>				
+				</ul>            
+				<div>
+					<div id="step-1" class="">
+						<h3><b>No Smartphone:</b></h3></br>
+						<h4><ul>
+						<li>Acesse o Google Play Store </li></br>
+						<li>Procure por "AirMore"</li></br></h4>
+						<img src="img/GoogleStore.png" alt="Google Store" width="360" height="650" >									
+						<img src="img/GoogleStoreAirMore.png" alt="Resultado da busca" width="360" height="650">				
+					   </ul>
+					</div>
+					 <div id="step-2" class=""></br>
+						<ul>
+						<h4><li>Entre em "AirMore Video Recorder" da empresa "APOWERSOFT LTD"</li></h4></br>
+						<img src="img/searchResultAirMore.png" alt="Resultado da busca" width="360" height="650">				
+					  </ul>
+					</div>
+					<div id="step-3" class=""></br>
+						<ul>
+						<h4><li>Clique em Instalar</li></br></h4>
+						<h4><li>Clique em Aceitar</li></br></h4>			
+						<img src="img/AirMore1.png" alt="Instalar" width="360" height="650">				
+						<img src="img/AirMore2.png" alt="Instalar" width="360" height="650">				 									
+					  </ul>
+					</div>
+				   
+					<div id="step-4" class=""></br>
+						<ul>
+						<h4><li>Clique em procurar</li></br></h4>
+						<h4><li>Procure por "Floating Camera"</li></br></h4>		
+						<h4><li>Entre em "Floating Camera Video Recorder" da empresa "Tattu MB"</li></h4></br>				
+						<img src="img/AirMore3.png" alt="Google Store" width="360" height="650" >				
+						<img src="img/searchResultFloatingCamera.png" alt="Resultado da busca" width="360" height="650">				
+					   </ul>
+					</div>
+					<div id="step-5" class=""></br>
+						<ul>
+						<h4><li>Clique em Instalar</li></h4></br>
+						<h4><li>Clique em Aceitar</li></h4></br>			
+						<img src="img/instalarFloatingCamera.png" alt="Instalar" width="360" height="650">				
+						<img src="img/aceitarFloatingCamera.png" alt="Instalar" width="360" height="650">	
+						</ul>
+					</div>		
+					<div id="step-6" class=""></br>
+						<ul>
+						<h4><li>Após o término da instalação, feche o Google Play</li></h4></br>							
+						<img src="img/AbrirFloatingCamera.png" alt="Instalar" width="360" height="650">									
+						</ul>
+					</div>								
+					<div id="step-7" class="">	</br>
+						<ul>
+						<h3>Todos os programas necessários estão instalados.
+						</br></br> Clique em "Sincronizar" no menu acima ou clique em "Terminar" para voltar a tela inicial.</h3></br>
+						</ul>     				
+					</div>						
+				</div>
+			</div>
+		</div>
+		
 	</div>
     
     <!-- /.container -->
@@ -407,17 +495,29 @@
     <script src="js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready( function() {
-		
+			
+			$("#load_inicio").on("click", function() {
+				abrirInicio();
+			});
+			
+			$("#load_PC").on("click", function() {
+				abrirTelaPC();
+			});
+			
+			$("#load_smartphone").on("click", function() {
+				abrirTelaSmartphone();
+			});
+			
 			$("#btn_computador").on("click", function() {
-				$("#textoInicial").attr("class", "row");
-				
-				openDiv("PC");
+				abrirTelaPC();
+			});
+			
+			$("#btn_smartphone").on("click", function() {
+				abrirTelaSmartphone();
 			});
 			
 			$("#btn_voltar").on("click", function() {
-				$("#textoInicial").attr("class", "row");
-				
-				openDiv("inicial");				
+				abrirInicial();			
 			});
 			
 			$("#btn_voltarQuestionario").on("click", function() {
@@ -433,8 +533,6 @@
 											
 				startWizardInstalacaoPC();
 			});
-			
-			
 												
 			$("#btn_sincronizar").on("click", function() {
 				$("#textoInicial").attr("class", "hide");
@@ -458,13 +556,37 @@
 				
 				startWizardIniciarGravacao();
 			});
+			
+			$("#btn_fimGravacao").on("click", function() {
+				
+				$("#textoInicial").attr("class", "hide");
+				
+				openDiv("fimGravacao");
+				
+				startWizardFimGravacao();
+			});
+			
+			$("#btn_instalarSmartphone").on("click", function() {
+				
+				$("#textoInicial").attr("class", "hide");
+				
+				openDiv("instalacaoSmartphone");
+				
+				startWizardInstalacaoSmartphone();
+			});
+			
+			$("#btn_sincronizarSmartphone").on("click", function() {
+				$("#textoInicial").attr("class", "hide");
+				openDiv("sincronizacao");
+				
+				startWizardSincronizacao();  
+			});
 				
 			$("#btn_siteairmore").on("click", function() {
 				openInNewTab('http://airmore.net');
 			});
-			
-			
-			 $("#btn_enviarURLQuestionario").on("click", function() {
+						
+			$("#btn_enviarURLQuestionario").on("click", function() {
 				var teste = $("#questionario").val();
 				sessionStorage.setItem("SessionTeste",teste);
 				alert("Questionário salvo");
@@ -484,12 +606,32 @@
 				$("#configQuestionario").attr("class", "hide");
 				$("#iniciarGravacao").attr("class", "hide");
 				$("#fimGravacao").attr("class", "hide");
+				$("#smartphone").attr("class", "hide");
+				$("#instalacaoSmartphone").attr("class", "hide");
 				
 				$("#"+div).attr("class", "col-lg-12");
 			};
 			
+			function abrirInicio(){
+				$("#textoInicial").attr("class", "row");
+				
+				openDiv("inicial");	
+			} 
+			
+			function abrirTelaPC(){
+				$("#textoInicial").attr("class", "row");
+				
+				openDiv("PC");
+			};
+			
+			function abrirTelaSmartphone(){
+				$("#textoInicial").attr("class", "row");
+				
+				openDiv("smartphone");
+			} ;
+			
 			function startWizardSincronizacao(){
-				 $("#smartwizard_instalacaoSmartphone").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+				 $("#smartwizard_sincronizacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
 			  
 					   if(stepPosition === 'first'){
 						   $("#prev-btn").addClass('disabled');
@@ -502,16 +644,15 @@
 					});
 					
 					// Toolbar extra buttons
-					var btnFinish = $('<button></button>').text('Terminar')
+					var btnFinish = $('<button></button>').text('Inicio')
 													 .addClass('btn btn-info')
 													 .on('click', function(){ window.open ('index.html','_self',false); });
 					var btnCancel = $('<button></button>').text('Reiniciar')
 													 .addClass('btn btn-danger')
-													 .on('click', function(){ $('#smartwizard_instalacaoSmartphone').smartWizard("reset"); });                         
-					
+													 .on('click', function(){ $('#smartwizard_sincronizacao').smartWizard("reset"); });
 					
 					// Smart Wizard
-					$('#smartwizard_instalacaoSmartphone').smartWizard({ 
+					$('#smartwizard_sincronizacao').smartWizard({ 
 							selected: 0, 
 							theme: 'default',
 							transitionEffect:'fade',
@@ -519,6 +660,9 @@
 											  toolbarExtraButtons: [btnFinish, btnCancel]
 											}
 					 });
+					 
+					 $('#smartwizard_sincronizacao').smartWizard("reset");
+					 
 			};
 			
 			function startWizardInstalacaoPC(){
@@ -534,16 +678,16 @@
 				});
 				
 				// Toolbar extra buttons
-				var btnFinish = $('<button></button>').text('Voltar')
+				var btnFinish = $('<button></button>').text('Inicio')
 												 .addClass('btn btn-info')
-												 .on('click', function(){ window.open ('index.html','_self',false); });
+												 .on('click', function(){ abrirTelaPC(); });
 				var btnCancel = $('<button></button>').text('Reiniciar')
 												 .addClass('btn btn-danger')
 												 .on('click', function(){ $('#smartwizard_instalacaoPC').smartWizard("reset"); });                         
 												 
 				var btnProximo = $('<button></button>').text('Sincronizar')
 												 .addClass('btn btn-success')
-												 .on('click', function(){ openDiv("sincronizacao");startWizardSincronizacao();});								 
+												 .on('click', function(){ openDiv("sincronizacao"); startWizardSincronizacao();});								 
 				
 				
 				// Smart Wizard
@@ -571,16 +715,16 @@
             });
             
             // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Terminar')
+            var btnFinish = $('<button></button>').text('Inicio')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ window.open ('index.html','_self',false); });
+                                             .on('click', function(){ abrirTelaPC(); });
             var btnCancel = $('<button></button>').text('Reiniciar')
                                              .addClass('btn btn-danger')
-                                             .on('click', function(){ $('#smartwizard_iniciarGravacao').smartWizard("reset"); });                         
+                                             .on('click', function(){ $('#smartwizard_iniciarGravacao').smartWizard("reset");  });                         
 										
 			var btnProximo = $('<button></button>').text('Finalizar')
                                              .addClass('btn btn-success')
-                                             .on('click', function(){ openDiv("fimGravacao"); });                         
+                                             .on('click', function(){ openDiv("fimGravacao");startWizardFimGravacao(); });                         
             
             
             
@@ -610,9 +754,9 @@
             });
             
             // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Terminar')
+            var btnFinish = $('<button></button>').text('Inicio')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ window.open ('index.html','_self',false); });
+                                             .on('click', function(){ abrirTelaPC(); });
             var btnCancel = $('<button></button>').text('Reiniciar')
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_fimGravacao').smartWizard("reset"); });                         
@@ -625,6 +769,44 @@
                     transitionEffect:'fade',
                     toolbarSettings: {toolbarPosition: 'top',
                                       toolbarExtraButtons: [btnFinish, btnCancel]
+                                    }
+                 });
+				 
+			 $('#smartwizard_fimGravacao').smartWizard("reset");
+			};
+			
+			function startWizardInstalacaoSmartphone(){
+				$("#smartwizard_smartphone").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
+               if(stepPosition === 'first'){
+                   $("#prev-btn").addClass('disabled');
+               }else if(stepPosition === 'final'){
+                   $("#next-btn").addClass('disabled');
+               }else{
+                   $("#prev-btn").removeClass('disabled');
+                   $("#next-btn").removeClass('disabled');
+               }
+            });
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Inicio')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ abrirTelaSmartphone(); });
+            var btnCancel = $('<button></button>').text('Reiniciar')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ $('#smartwizard_smartphone').smartWizard("reset"); });   
+
+			var btnProximo = $('<button></button>').text('Sincronizar')
+													.addClass('btn btn-success')
+													.on('click', function(){ openDiv("sincronizacao"); startWizardSincronizacao();});
+            
+            
+            // Smart Wizard
+            $('#smartwizard_smartphone').smartWizard({ 
+                    selected: 0, 
+                    theme: 'default',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'top',
+                                      toolbarExtraButtons: [btnFinish, btnCancel,btnProximo]
                                     }
                  });
 			};
