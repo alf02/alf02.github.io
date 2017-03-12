@@ -71,47 +71,49 @@
 
     <!-- Page Content -->
     <div class="container">
-		<div class="row" id="textoInicial">
+		<div class="row" id="textoDispositivo">
+				<h1>Escolha o dispositivo</h1></br>
+				<h4>Escolha o dispositivo que você deseja configurar.
+				</br></br></br>				
+		</div>
+		<div class="row" id="textoPC">
 		            
                 <h1>Escolha uma opção</h1></br>
-				<h4>Caso seja a primeira vez de uso, escolha "Instalar" para realizar a instalação dos programas necessários para a gravação do teste.
+				<h4>Caso seja a primeira vez de uso, escolha "Instalar no computador" para realizar a instalação dos programas necessários para a gravação do teste.
 				</br></br></br>
-				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.</h4>
-				</br></br></br></br>
+				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.
+				</br></br></br>
+				Escolha "Configurar Questionário" para trocar o questionário utilizado no teste.
+				</br></br></br>
+				Escolha "Iniciar gravação" para iniciar a gravação do teste.
+				</br></br></br>
+				Escolha "Finalizar gravação" para finalizar a gravação do teste.				
+				</br></br></br></br></h4>
+		</div>
+		<div class="row" id="textoSmartphone">
+		            
+                <h1>Escolha uma opção</h1></br>
+				<h4>Caso seja a primeira vez de uso, escolha "Instalar no Smartphone" para realizar a instalação dos programas necessários para a gravação do teste.
+				</br></br></br>
+				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.
+				</br></br></br>
+				Escolha "Responder Questionário" para responder o questionário selecionado para o teste.				
+				</br></br></br></br></h4>
 		</div>
         <div class="row">
 			<div class="col-lg-12" id="inicial">
-				<a href="#" class="btn btn-info btn-lg" id="btn_computador">
-				<span class="glyphicon glyphicon-blackboard"></span> Computador
-				</a>
-					</br></br>
-				<a href="#" class="btn btn-info btn-lg" id="btn_smartphone">
-				<span class="glyphicon glyphicon-phone"></span> Smartphone
-				</a>
+				<button class="btn btn-info glyphicon glyphicon-blackboard btn-lg" id="btn_computador"> Computador</button>
+				</br></br>
+				<button class="btn btn-info glyphicon glyphicon-phone btn-lg" id="btn_smartphone"> Smartphone</button>
             </div>
         </div>
 		<div class="hide" id="PC">
-			<a href="#" class="btn btn-info btn-lg" id="btn_instalarComputador">
-			<span class="glyphicon glyphicon-cog"></span> Instalar no computador
-			</a>
-					
-			<a href="#" class="btn btn-info btn-lg" id="btn_sincronizar">
-			<span class="glyphicon glyphicon-refresh"></span> Sincronizar
-			</a>		
-			<a href="#" class="btn btn-info btn-lg" id="btn_configQuestionario">
-			<span class="glyphicon glyphicon-list-alt"></span> Configurar questionário
-			</a>		
-			
-			</br></br>
-			<a href="#" class="btn btn-info btn-lg" id="btn_iniciarGravacao">
-			<span class="glyphicon glyphicon-facetime-video"></span> Iniciar gravação
-			</a>
-			<a href="#" class="btn btn-info btn-lg" id="btn_fimGravacao">
-			<span class="glyphicon glyphicon-stop"></span> Finalizar gravação
-			</a>
-			<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
-			<span class="glyphicon glyphicon-chevron-left"></span> Voltar
-			</a>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarComputador"> Instalar no computador</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizar"> Sincronizar</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_configQuestionario"> Configurar questionário</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-facetime-video" id="btn_iniciarGravacao"> Iniciar gravação</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-stop" id="btn_fimGravacao"> Finalizar gravação</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltar"> Voltar</button>
 		</div>
 		<div id="instalacaoPC" class="hide">
 			<div id="smartwizard_instalacaoPC">
@@ -129,9 +131,7 @@
                 <div id="step-1" class="">
 					<ul>
 					<h3><b>No computador:</b></h3></br></br>
-					<a href="#" class="btn btn-info btn-lg" id="btn_sitecamstudio" onclick="window.open('http://camstudio.org/', '_blank');" >
-						<span class="glyphicon glyphicon-arrow-right"></span> Clique aqui para entrar no site do CamStudio
-					</a>					
+					<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-arrow-right" id="btn_sitecamstudio"> Site do CamStudio</button>
 					</ul>
                 </div>						
 				<div id="step-2" class=""></br>
@@ -150,9 +150,9 @@
 					<ul>
 					<h4><li>Após finalizar o "Download", clique no arquivo para instalar.</li></h4></br>
 					<h4><li>Clique em "Next"</li></h4></br>			
-					<h4><li>Clique em "Accept"</li></br>			
+					<h4><li>Clique em "Accept"</li></br>
 					<img src="img/CamStudio4.png" alt="Instalar" class="img">				
-					<img src="img/CamStudio5.png" alt="Instalar" class="img">		
+					<img src="img/CamStudio5.png" alt="Instalar" class="img">
 					</ul>  
                 </div>	
 				<div id="step-5" class=""></br>
@@ -251,9 +251,7 @@
 				<div id="step-6" class="">
 					<h3><b>No computador:</b></h3></br></br>
 					<ul>
-					<a href="#" class="btn btn-info btn-lg" id="btn_siteairmore">
-						<span class="glyphicon glyphicon glyphicon-arrow-right"></span> Clique aqui para entrar no site do AirMore
-					</a>
+					<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-arrow-right" id="btn_siteairmore"> Site do AirMore</button>
 					</ul>				
                 </div>
 				<div id="step-7" class="">
@@ -315,13 +313,9 @@
 			<div class="form-group">
 				<label for="questionario">URL do questionário</label>
 				<input type="text" class="form-control" id="questionario">
-				<br/>
-				<a href="#" class="btn btn-info btn-lg" id="btn_voltarQuestionario">
-				<span class="glyphicon glyphicon-chevron-left"></span> Voltar
-				</a>
-				<a href="#" class="btn btn-info btn-lg" id="btn_enviarURLQuestionario">
-				<span class="glyphicon glyphicon-save"></span> Salvar
-				</a>
+				<br/>				
+				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltarQuestionario"> Voltar</button>
+				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-save" id="btn_enviarURLQuestionario"> Salvar</button>				
 			</div>
 		
 		</div>
@@ -332,10 +326,8 @@
                 <li><a href="#step-2">Passo 2<br /></a></li>
                 <li><a href="#step-3">Passo 3<br /></a></li>
                 <li><a href="#step-4">Passo 4<br /></a></li>				
-            </ul>
-            
-            <div>
-               
+            </ul>            
+            <div>               
 				<div id="step-1" class="">
 					<h3><b>No computador:</b></h3></br>
 					<ul>
@@ -394,23 +386,11 @@
 			</div>
 		</div>
 		
-		<div class="hide" id="smartphone">
-			<a href="#" class="btn btn-info btn-lg" id="btn_instalarSmartphone">
-			<span class="glyphicon glyphicon-cog"></span> Instalar no smartphone
-			</a>
-			</br></br>
-			
-			<a href="#" class="btn btn-info btn-lg" id="btn_sincronizarSmartphone">
-			<span class="glyphicon glyphicon-refresh"></span> Sincronizar
-			</a>		
-			
-			<a href="#" class="btn btn-info btn-lg" id="btn_responderQuestionario">
-			<span class="glyphicon glyphicon-list-alt"></span> Responder questionário
-			</a>		
-			
-			<a href="#" class="btn btn-info btn-lg" id="btn_voltar">
-			<span class="glyphicon glyphicon-chevron-left"></span> Voltar
-			</a>
+		<div class="hide" id="smartphone">		
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarSmartphone"> Instalar no smartphone</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizarSmartphone"> Sincronizar</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_responderQuestionario"> Responder questionário</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltarSmartphone"> Voltar</button>							
 		</div>
 		
 		<div class="hide" id="instalacaoSmartphone">
@@ -495,6 +475,8 @@
 	<script>
 		$(document).ready( function() {
 			
+			abrirInicio();
+			
 			$("#load_inicio").on("click", function() {
 				abrirInicio();
 			});
@@ -516,25 +498,24 @@
 			});
 			
 			$("#btn_voltar").on("click", function() {
-				abrirInicial();			
+				abrirInicio();			
 			});
 			
 			$("#btn_voltarQuestionario").on("click", function() {
-				$("#textoInicial").attr("class", "row");
-				
-				openDiv("inicial");				
+				abrirTelaPC();					
+			});
+			
+			$("#btn_voltarSmartphone").on("click", function() {
+				abrirInicio();			
 			});
 			
 			$("#btn_instalarComputador").on("click", function() {
-				$("#textoInicial").attr("class", "hide");
-				
 				openDiv("instalacaoPC");				
 											
 				startWizardInstalacaoPC();
 			});
 												
 			$("#btn_sincronizar").on("click", function() {
-				$("#textoInicial").attr("class", "hide");
 				openDiv("sincronizacao");
 				
 				startWizardSincronizacao();  
@@ -542,14 +523,14 @@
 			
 			$("#btn_configQuestionario").on("click", function() {
 				
-				$("#textoInicial").attr("class", "hide");
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
 				
 				openDiv("configQuestionario");
 			});
 			
 			$("#btn_iniciarGravacao").on("click", function() {
-				
-				$("#textoInicial").attr("class", "hide");
 				
 				openDiv("iniciarGravacao");
 				
@@ -558,8 +539,6 @@
 			
 			$("#btn_fimGravacao").on("click", function() {
 				
-				$("#textoInicial").attr("class", "hide");
-				
 				openDiv("fimGravacao");
 				
 				startWizardFimGravacao();
@@ -567,15 +546,12 @@
 			
 			$("#btn_instalarSmartphone").on("click", function() {
 				
-				$("#textoInicial").attr("class", "hide");
-				
 				openDiv("instalacaoSmartphone");
 				
 				startWizardInstalacaoSmartphone();
 			});
 			
 			$("#btn_sincronizarSmartphone").on("click", function() {
-				$("#textoInicial").attr("class", "hide");
 				openDiv("sincronizacao");
 				
 				startWizardSincronizacao();  
@@ -589,8 +565,7 @@
 				var teste = $("#questionario").val();
 				sessionStorage.setItem("SessionTeste",teste);
 				alert("Questionário salvo");
-				$("#textoInicial").attr("class", "row");
-				openDiv("inicial");
+				abrirInicio();
 			});
 			
             function openInNewTab(url) {
@@ -612,24 +587,36 @@
 			};
 			
 			function abrirInicio(){
-				$("#textoInicial").attr("class", "row");
+				$("#textoDispositivo").attr("class", "row");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
 				
 				openDiv("inicial");	
 			} 
 			
 			function abrirTelaPC(){
-				$("#textoInicial").attr("class", "row");
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "row");
+				$("#textoSmartphone").attr("class", "hide");
 				
 				openDiv("PC");
 			};
 			
 			function abrirTelaSmartphone(){
-				$("#textoInicial").attr("class", "row");
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "row");
 				
 				openDiv("smartphone");
 			} ;
+					
 			
 			function startWizardSincronizacao(){
+			
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+				
 				 $("#smartwizard_sincronizacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
 			  
 					   if(stepPosition === 'first'){
@@ -665,6 +652,11 @@
 			};
 			
 			function startWizardInstalacaoPC(){
+			
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+				
 				$("#smartwizard_instalacaoPC").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
 				   if(stepPosition === 'first'){
 					   $("#prev-btn").addClass('disabled');
@@ -701,6 +693,11 @@
 			};
 			
 			function startWizardIniciarGravacao(){
+				
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+			
 				$("#smartwizard_iniciarGravacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
                //alert("You are on step "+stepNumber+" now");
                if(stepPosition === 'first'){
@@ -740,6 +737,11 @@
 			};
 			
 			function startWizardFimGravacao(){
+				
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+			
 				$("#smartwizard_fimGravacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
                //alert("You are on step "+stepNumber+" now");
                if(stepPosition === 'first'){
@@ -775,6 +777,11 @@
 			};
 			
 			function startWizardInstalacaoSmartphone(){
+				
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+			
 				$("#smartwizard_smartphone").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
                if(stepPosition === 'first'){
                    $("#prev-btn").addClass('disabled');

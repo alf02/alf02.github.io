@@ -5,4 +5,11 @@
 .img{
 	max-width:100%;
 	height: auto;
+	margin-right: 15px !important;
+	margin-bottom: 30px !important;
+} 
+
+.btn_margin{
+	margin-right: 5px;
+	margin-bottom: 10px;
 } 
