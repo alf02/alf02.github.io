@@ -108,7 +108,7 @@
             </div>
         </div>
 		<div class="hide" id="PC">
-			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarComputador"> Instalar no computador</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarComputador"> Instalar</button>
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizar"> Sincronizar</button>
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_configQuestionario"> Configurar questionário</button>
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-facetime-video" id="btn_iniciarGravacao"> Iniciar gravação</button>
@@ -387,7 +387,7 @@
 		</div>
 		
 		<div class="hide" id="smartphone">		
-			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarSmartphone"> Instalar no smartphone</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarSmartphone"> Instalar</button>				
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizarSmartphone"> Sincronizar</button>				
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_responderQuestionario"> Responder questionário</button>				
 			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltarSmartphone"> Voltar</button>							
@@ -460,8 +460,7 @@
 					</div>						
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 	</div>
     
     <!-- /.container -->
@@ -559,6 +558,10 @@
 				
 			$("#btn_siteairmore").on("click", function() {
 				openInNewTab('http://airmore.net');
+			}); 
+			
+			$("#btn_sitecamstudio").on("click", function() {
+				openInNewTab('http://camstudio.org/');
 			});
 						
 			$("#btn_enviarURLQuestionario").on("click", function() {
