@@ -54,10 +54,10 @@
                         <a href="#" id="load_inicio">Início</a>
                     </li>
                     <li>
-                        <a href="#" id="load_instalacao">Primeira vez</a>
+                        <a href="#" id="load_PC">Computador</a>
                     </li>
                     <li>
-                        <a href="#" id="load_sincronizacao">Sincronização</a>
+                        <a href="#" id="load_smartphone">Smartphone</a>
                     </li>
                     
                 </ul>
@@ -71,22 +71,50 @@
 
     <!-- Page Content -->
     <div class="container">
-		<div class="row" id="textoInicial">		            
+		<div class="row" id="textoDispositivo">
+				<h1>Escolha o dispositivo</h1></br>
+				<h4>Escolha o dispositivo que você deseja configurar.
+				</br></br></br>				
+		</div>
+		<div class="row" id="textoPC">
+		            
                 <h1>Escolha uma opção</h1></br>
-				<h4>Caso seja a primeira vez de uso, escolha "Primeira vez" para realizar a instalação dos programas necessários para a gravação do teste.
+				<h4>Caso seja a primeira vez de uso, escolha "Instalar no computador" para realizar a instalação dos programas necessários para a gravação do teste.
 				</br></br></br>
-				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.				
+				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.
+				</br></br></br>
+				Escolha "Configurar Questionário" para trocar o questionário utilizado no teste.
+				</br></br></br>
+				Escolha "Iniciar gravação" para iniciar a gravação do teste.
+				</br></br></br>
+				Escolha "Finalizar gravação" para finalizar a gravação do teste.				
 				</br></br></br></br></h4>
 		</div>
-		
+		<div class="row" id="textoSmartphone">
+		            
+                <h1>Escolha uma opção</h1></br>
+				<h4>Caso seja a primeira vez de uso, escolha "Instalar no Smartphone" para realizar a instalação dos programas necessários para a gravação do teste.
+				</br></br></br>
+				Caso a instalação já foi realizada, escolha "Sincronizar" para realizar a configuração necessária para a gravação do teste.
+				</br></br></br>
+				Escolha "Responder Questionário" para responder o questionário selecionado para o teste.				
+				</br></br></br></br></h4>
+		</div>
         <div class="row">
 			<div class="col-lg-12" id="inicial">
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalar"> Primeira vez</button>
+				<button class="btn btn-info glyphicon glyphicon-blackboard btn-lg" id="btn_computador"> Computador</button>
 				</br></br>
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizar"> Sincronizar</button>			
-				
+				<button class="btn btn-info glyphicon glyphicon-phone btn-lg" id="btn_smartphone"> Smartphone</button>
             </div>
-        </div>		
+        </div>
+		<div class="hide" id="PC">
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarComputador"> Instalar</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizar"> Sincronizar</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_configQuestionario"> Configurar questionário</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-facetime-video" id="btn_iniciarGravacao"> Iniciar gravação</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-stop" id="btn_fimGravacao"> Finalizar gravação</button>
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltar"> Voltar</button>
+		</div>
 		<div id="instalacaoPC" class="hide">
 			<div id="smartwizard_instalacaoPC">
             <ul>
@@ -286,8 +314,8 @@
 				<label for="questionario">URL do questionário</label>
 				<input type="text" class="form-control" id="inputQuestionario">
 				<br/>				
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-save" id="btn_enviarURLQuestionario"> Salvar</button>
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-right" id="btn_sincronizarQuestionario"> Sincronizar</button>				
+				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltarQuestionario"> Voltar</button>
+				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-save" id="btn_enviarURLQuestionario"> Salvar</button>				
 			</div>
 		
 		</div>
@@ -356,6 +384,13 @@
                 </div>
             </div>
 			</div>
+		</div>
+		
+		<div class="hide" id="smartphone">		
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalarSmartphone"> Instalar</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizarSmartphone"> Sincronizar</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-list-alt" id="btn_responderQuestionario"> Responder questionário</button>				
+			<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-chevron-left" id="btn_voltarSmartphone"> Voltar</button>							
 		</div>
 		
 		<div class="hide" id="instalacaoSmartphone">
@@ -453,29 +488,44 @@
 				abrirInicio();
 			});
 			
-			$("#load_instalacao").on("click", function() {
-				abrirInstalacao();
+			$("#load_PC").on("click", function() {
+				abrirTelaPC();
 			});
 			
-			$("#load_sincronizacao").on("click", function() {
-				abrirSincronizacao();
+			$("#load_smartphone").on("click", function() {
+				abrirTelaSmartphone();
 			});
 			
+			$("#btn_computador").on("click", function() {
+				abrirTelaPC();
+			});
 			
+			$("#btn_smartphone").on("click", function() {
+				abrirTelaSmartphone();
+			});
 			
+			$("#btn_voltar").on("click", function() {
+				abrirInicio();			
+			});
 			
+			$("#btn_voltarQuestionario").on("click", function() {
+				abrirTelaPC();					
+			});
 			
+			$("#btn_voltarSmartphone").on("click", function() {
+				abrirInicio();			
+			});
 			
-			
-			
-			
-			
-			$("#btn_instalar").on("click", function() {
-				abrirInstalacao();
+			$("#btn_instalarComputador").on("click", function() {
+				abrirDiv("instalacaoPC");				
+											
+				startWizardInstalacaoPC();
 			});
 												
 			$("#btn_sincronizar").on("click", function() {
-				abrirSincronizacao();  
+				abrirDiv("sincronizacao");
+				
+				startWizardSincronizacao();  
 			});
 			
 			$("#btn_configQuestionario").on("click", function() {
@@ -485,8 +535,31 @@
 				abrirDiv("configQuestionario");
 			});
 			
-			$("#btn_sincronizarQuestionario").on("click", function() {
-				abrirSincronizacao();
+			$("#btn_iniciarGravacao").on("click", function() {
+				
+				abrirDiv("iniciarGravacao");
+				
+				startWizardIniciarGravacao();
+			});
+			
+			$("#btn_fimGravacao").on("click", function() {
+				
+				abrirDiv("fimGravacao");
+				
+				startWizardFimGravacao();
+			});
+			
+			$("#btn_instalarSmartphone").on("click", function() {
+				
+				abrirDiv("instalacaoSmartphone");
+				
+				startWizardInstalacaoSmartphone();
+			});
+			
+			$("#btn_sincronizarSmartphone").on("click", function() {
+				abrirDiv("sincronizacao");
+				
+				startWizardSincronizacao();  
 			});
 				
 			$("#btn_siteairmore").on("click", function() {
@@ -528,52 +601,35 @@
 			};
 			
 			function abrirTexto(texto){ 
-				$("#textoInicial").attr("class", "hide");
-								
+				$("#textoDispositivo").attr("class", "hide");
+				$("#textoPC").attr("class", "hide");
+				$("#textoSmartphone").attr("class", "hide");
+				
 				if(texto!="")
 					$(texto).attr("class", "row");
 			}
 			
 			function abrirInicio(){
-				abrirTexto("#textoInicial");
+				abrirTexto("#textoDispositivo");
 				
 				abrirDiv("inicial");	
 			} 
 			
-			function abrirInstalacao(){
-				abrirTexto("");
-				abrirDiv("instalacaoPC");
-				startWizardInstalacaoPC();
+			function abrirTelaPC(){
+				abrirTexto("#textoPC");
+								
+				abrirDiv("PC");
 			};
 			
-			function abrirSincronizacao(){
-				abrirTexto("");								
-				abrirDiv("sincronizacao");				
-				startWizardSincronizacao();
-			} ;
-			
-			function abrirIniciarGravacao(){
-				abrirTexto("");								
-				abrirDiv("iniciarGravacao"); 
-				startWizardIniciarGravacao();
-			} ;
-			
-			function abrirFimGravacao(){
-				abrirTexto("");								
-				abrirDiv("fimGravacao"); 
-				startWizardFimGravacao();
-			} ;
-			
-			function abrirInstalacaoSmartphone(){
-				abrirTexto("");								
-				abrirDiv("instalacaoSmartphone"); 
-				startWizardInstalacaoSmartphone();
+			function abrirTelaSmartphone(){
+				abrirTexto("#textoSmartphone");
+				
+				abrirDiv("smartphone");
 			} ;
 					
 			
 			function startWizardSincronizacao(){
 				abrirTexto("");
-				$('#smartwizard_sincronizacao').smartWizard("reset");
 				
 				$("#smartwizard_sincronizacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
 			  
@@ -588,16 +644,12 @@
 					});
 					
 					// Toolbar extra buttons
-					var btnFinish = $('<button></button>').text('Menu inicial')
+					var btnFinish = $('<button></button>').text('Inicio')
 													 .addClass('btn btn-info')
-													 .on('click', function(){ abrirInicio(); });
+													 .on('click', function(){ window.open ('index.html','_self',false); });
 					var btnCancel = $('<button></button>').text('Reiniciar')
 													 .addClass('btn btn-danger')
 													 .on('click', function(){ $('#smartwizard_sincronizacao').smartWizard("reset"); });
-					
-					var btnProximo = $('<button></button>').text('Iniciar Gravação')
-												 .addClass('btn btn-success')
-												 .on('click', function(){ abrirIniciarGravacao(); });
 					
 					// Smart Wizard
 					$('#smartwizard_sincronizacao').smartWizard({ 
@@ -605,7 +657,7 @@
 							theme: 'default',
 							transitionEffect:'fade',
 							toolbarSettings: {toolbarPosition: 'top',
-											  toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+											  toolbarExtraButtons: [btnFinish, btnCancel]
 											}
 					 });
 					 
@@ -616,7 +668,6 @@
 			function startWizardInstalacaoPC(){
 			
 				abrirTexto("");
-				$('#smartwizard_instalacaoPC').smartWizard("reset");
 				
 				$("#smartwizard_instalacaoPC").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
 				   if(stepPosition === 'first'){
@@ -630,16 +681,16 @@
 				});
 				
 				// Toolbar extra buttons
-				var btnFinish = $('<button></button>').text('Menu inicial')
+				var btnFinish = $('<button></button>').text('Inicio')
 												 .addClass('btn btn-info')
-												 .on('click', function(){ abrirInicio(); });
+												 .on('click', function(){ abrirTelaPC(); });
 				var btnCancel = $('<button></button>').text('Reiniciar')
 												 .addClass('btn btn-danger')
 												 .on('click', function(){ $('#smartwizard_instalacaoPC').smartWizard("reset"); });                         
 												 
-				var btnProximo = $('<button></button>').text('Instalação Smartphone')
+				var btnProximo = $('<button></button>').text('Sincronizar')
 												 .addClass('btn btn-success')
-												 .on('click', function(){ abrirInstalacaoSmartphone(); });								 
+												 .on('click', function(){ abrirDiv("sincronizacao"); startWizardSincronizacao();});								 
 				
 				
 				// Smart Wizard
@@ -656,8 +707,7 @@
 			function startWizardIniciarGravacao(){
 				
 				abrirTexto("");
-				$('#smartwizard_iniciarGravacao').smartWizard("reset");
-				
+			
 				$("#smartwizard_iniciarGravacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
                //alert("You are on step "+stepNumber+" now");
                if(stepPosition === 'first'){
@@ -671,16 +721,16 @@
             });
             
             // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Menu inicial')
+            var btnFinish = $('<button></button>').text('Inicio')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ abrirInicio(); });
+                                             .on('click', function(){ abrirTelaPC(); });
             var btnCancel = $('<button></button>').text('Reiniciar')
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_iniciarGravacao').smartWizard("reset");  });                         
 										
-			var btnProximo = $('<button></button>').text('Finalizar Gravação')
+			var btnProximo = $('<button></button>').text('Finalizar')
                                              .addClass('btn btn-success')
-                                             .on('click', function(){ abrirFimGravacao(); });                         
+                                             .on('click', function(){ abrirDiv("fimGravacao");startWizardFimGravacao(); });                         
             
             
             
@@ -699,8 +749,7 @@
 			function startWizardFimGravacao(){
 				
 				abrirTexto("");
-				$('#smartwizard_fimGravacao').smartWizard("reset");
-				
+			
 				$("#smartwizard_fimGravacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
                //alert("You are on step "+stepNumber+" now");
                if(stepPosition === 'first'){
@@ -714,16 +763,12 @@
             });
             
             // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Menu inicial')
+            var btnFinish = $('<button></button>').text('Inicio')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ abrirInicio(); });
+                                             .on('click', function(){ abrirTelaPC(); });
             var btnCancel = $('<button></button>').text('Reiniciar')
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_fimGravacao').smartWizard("reset"); });                         
-											 
-			var btnProximo = $('<button></button>').text('Reiniciar Gravação')
-                                             .addClass('btn btn-success')
-                                             .on('click', function(){ abrirIniciarGravacao(); }); 								 
             
             
             // Smart Wizard
@@ -732,7 +777,7 @@
                     theme: 'default',
                     transitionEffect:'fade',
                     toolbarSettings: {toolbarPosition: 'top',
-                                      toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+                                      toolbarExtraButtons: [btnFinish, btnCancel]
                                     }
                  });
 				 
@@ -742,8 +787,7 @@
 			function startWizardInstalacaoSmartphone(){
 				
 				abrirTexto("");
-				$('#smartwizard_smartphone').smartWizard("reset");
-				
+			
 				$("#smartwizard_smartphone").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
                if(stepPosition === 'first'){
                    $("#prev-btn").addClass('disabled');
@@ -756,16 +800,16 @@
             });
             
             // Toolbar extra buttons
-            var btnFinish = $('<button></button>').text('Menu inicial')
+            var btnFinish = $('<button></button>').text('Inicio')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ abrirInicio(); });
+                                             .on('click', function(){ abrirTelaSmartphone(); });
             var btnCancel = $('<button></button>').text('Reiniciar')
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_smartphone').smartWizard("reset"); });   
 
-			var btnProximo = $('<button></button>').text('Configurar Questionário')
+			var btnProximo = $('<button></button>').text('Sincronizar')
 													.addClass('btn btn-success')
-													.on('click', function(){ abrirDiv("configQuestionario");});
+													.on('click', function(){ abrirDiv("sincronizacao"); startWizardSincronizacao();});
             
             
             // Smart Wizard
@@ -774,7 +818,7 @@
                     theme: 'default',
                     transitionEffect:'fade',
                     toolbarSettings: {toolbarPosition: 'top',
-                                      toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+                                      toolbarExtraButtons: [btnFinish, btnCancel,btnProximo]
                                     }
                  });
 			};
