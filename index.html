@@ -853,7 +853,6 @@
 				
 				//responderQuestionario
 				$.getJSON(url,function(data){ 
-					//alert(data.feed.entry[0].content.$t);
 					window.open(data.feed.entry[0].content.$t,"questionario-frame");
 					abrirDiv("responderQuestionario");
 				});
