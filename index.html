@@ -328,6 +328,7 @@
             </div>
 			</div>
 		</div>
+		
 		<div id="fimGravacao" class="hide">
 			 <div id="smartwizard_fimGravacao">
             <ul>
@@ -353,6 +354,37 @@
 					<ul>
 					<h4><li>A gravação está finalizada e pronta para ser analisada.</li></h4></br>										
 					</ul>                  
+                </div>
+            </div>
+			</div>
+		</div>
+		<div id="exibirQuestionario" class="hide">
+			 <div id="smartwizard_exibirQuestionario">
+            <ul>
+                <li><a href="#step-1">Passo 1<br /></a></li>
+                <li><a href="#step-2">Passo 2<br /></a></li>
+                <li><a href="#step-3">Passo 3<br /></a></li>                
+            </ul>            
+            <div>               
+				<div id="step-1" class="">
+					<h3><b>No seu formulário do Google Forms:</b></h3></br>
+					<ul>					
+					<h4><li>Clique no botão de "Enviar"</li></h4></br>					
+					<img src="img/inserirQuestionario1.png" alt="Instalar" class="img">														
+					</ul>  
+                </div>
+				<div id="step-2" class=""></br>                
+					<ul>
+					<h4><li>Você pode escolher enviar o questionário por email para o participante ou enviar o link diretamente por outros meios (p. ex. Whatapp, Google Hangout)</li></h4></br>					
+					<img src="img/inserirQuestionario2.png" alt="Instalar" class="img"></br></br>
+					<img src="img/inserirQuestionario3.png" alt="Instalar" class="img"></br></br>					
+					</ul>                  
+                </div>				
+				<div id="step-3" class=""></br>                
+					<ul>
+					<h4><li>Você pode acessar as respostas ao questionário através da tab de "Respostas"</li></h4></br>
+					<img src="img/inserirQuestionario4.png" alt="Instalar" class="img"></br></br>		
+					</ul>                  					
                 </div>
             </div>
 			</div>
@@ -448,41 +480,25 @@
 		$(document).ready( function() {
 			
 			abrirInicio();
-			
+			//
 			$("#load_inicio").on("click", function() {
 				abrirInicio();
 			});
-			
+			//
 			$("#load_instalacao").on("click", function() {
 				abrirInstalacao();
 			});
-			
+			//
 			$("#load_sincronizacao").on("click", function() {
 				abrirSincronizacao();
 			});
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+			//
 			$("#btn_instalar").on("click", function() {
 				abrirInstalacao();
 			});
-												
+			//									
 			$("#btn_sincronizar").on("click", function() {
 				abrirSincronizacao();  
-			});
-			
-			$("#btn_configQuestionario").on("click", function() {
-				
-				abrirTexto("");
-				
-				abrirDiv("configQuestionario");
 			});
 			
 			$("#btn_sincronizarQuestionario").on("click", function() {
@@ -523,6 +539,7 @@
 				$("#smartphone").attr("class", "hide");
 				$("#instalacaoSmartphone").attr("class", "hide");
 				$("#responderQuestionario").attr("class", "hide");
+				$("#exibirQuestionario").attr("class", "hide");
 								
 				$("#"+div).attr("class", "col-lg-12");
 			};
@@ -556,6 +573,12 @@
 				abrirTexto("");								
 				abrirDiv("iniciarGravacao"); 
 				startWizardIniciarGravacao();
+			} ;
+			
+			function abrirExibirQuestionario(){
+				abrirTexto("");								
+				abrirDiv("exibirQuestionario"); 
+				startWizardExibirQuestionario();
 			} ;
 			
 			function abrirFimGravacao(){
@@ -696,6 +719,49 @@
                                          
 			};
 			
+			function startWizardExibirQuestionario(){
+				
+				abrirTexto("");
+				$('#smartwizard_exibirQuestionario').smartWizard("reset");
+				
+				$("#smartwizard_exibirQuestionario").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+               //alert("You are on step "+stepNumber+" now");
+               if(stepPosition === 'first'){
+                   $("#prev-btn").addClass('disabled');
+               }else if(stepPosition === 'final'){
+                   $("#next-btn").addClass('disabled');
+               }else{
+                   $("#prev-btn").removeClass('disabled');
+                   $("#next-btn").removeClass('disabled');
+               }
+            });
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Menu inicial')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ abrirInicio(); });
+            var btnCancel = $('<button></button>').text('Reiniciar')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ $('#smartwizard_exibirQuestionario').smartWizard("reset"); });                         
+											 
+			var btnProximo = $('<button></button>').text('Reiniciar Gravação')
+                                             .addClass('btn btn-success')
+                                             .on('click', function(){ abrirIniciarGravacao(); }); 								 
+            
+            
+            // Smart Wizard
+            $('#smartwizard_exibirQuestionario').smartWizard({ 
+                    selected: 0, 
+                    theme: 'default',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'top',
+                                      toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+                                    }
+                 });
+				 
+			 $('#smartwizard_exibirQuestionario').smartWizard("reset");
+			};
+			
 			function startWizardFimGravacao(){
 				
 				abrirTexto("");
@@ -721,9 +787,9 @@
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_fimGravacao').smartWizard("reset"); });                         
 											 
-			var btnProximo = $('<button></button>').text('Reiniciar Gravação')
+			var btnProximo = $('<button></button>').text('Exibir Questionário')
                                              .addClass('btn btn-success')
-                                             .on('click', function(){ abrirIniciarGravacao(); }); 								 
+                                             .on('click', function(){ abrirExibirQuestionario(); }); 								 
             
             
             // Smart Wizard
@@ -763,9 +829,9 @@
                                              .addClass('btn btn-danger')
                                              .on('click', function(){ $('#smartwizard_smartphone').smartWizard("reset"); });   
 
-			var btnProximo = $('<button></button>').text('Configurar Questionário')
+			var btnProximo = $('<button></button>').text('Sincronizar')
 													.addClass('btn btn-success')
-													.on('click', function(){ abrirDiv("configQuestionario");});
+													.on('click', function(){ abrirSincronizacao();});
             
             
             // Smart Wizard
@@ -809,7 +875,7 @@
 				
 				request.done(function (response, textStatus, jqXHR){
 					// Log a message to the console
-					console.log("Hooray, it worked!");
+					console.log("Funcionou");
 					console.log(response);
 					console.log(textStatus);
 					console.log(jqXHR);
@@ -819,7 +885,7 @@
 				request.fail(function (jqXHR, textStatus, errorThrown){
 					// Log the error to the console
 					console.error(
-						"The following error occurred: "+
+						"Erro: "+
 						textStatus, errorThrown
 					);
 				});
