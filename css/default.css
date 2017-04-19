@@ -3,7 +3,8 @@
 }
 
 .img{
-	max-width:100%;
+	max-width:99%;
+	max-height: 99%;
 	height: auto;
 	margin-right: 15px !important;
 	margin-bottom: 30px !important;
