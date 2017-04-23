@@ -7,7 +7,13 @@
 	max-width: 99% !important;
 	margin-right: 15px !important;
 	margin-bottom: 30px !important;
-} 
+}
+
+.div{
+	max-height: 99% !important;	
+	max-width: 99% !important;
+	
+}
 
 .btn_margin{
 	margin-right: 5px;
@@ -34,3 +40,4 @@
     width: 100%;
     height: 100%;
 }
+
