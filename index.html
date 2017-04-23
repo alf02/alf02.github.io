@@ -59,13 +59,16 @@
                         <a href="#" id="load_sincronizar">Sincronizar</a>
                     </li>
 					<li>
-                        <a href="#" id="load_iniciargravacao">Iniciar Gravação</a>
+                        <a href="#" id="load_iniciargravacao">Iniciar</a>
                     </li>
 					<li>
-                        <a href="#" id="load_finalizargravacao">Finalizar Gravação</a>
+                        <a href="#" id="load_finalizargravacao">Finalizar</a>
                     </li>
 					<li>
-                        <a href="#" id="load_exibirquestionario">Exibir Questionário</a>
+                        <a href="#" id="load_exibirquestionario">Questionário</a>
+                    </li>                    
+					<li>
+                        <a href="#" id="load_desinstalacao">Desinstalar</a>
                     </li>                    
                 </ul>
             </div>
@@ -88,9 +91,15 @@
 		
         <div class="row">
 			<div class="col-lg-12" id="inicial">
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-cog" id="btn_instalar"> Primeira vez</button>
+				<button class="btn btn-info btn_margin btn-lg" id="btn_instalar">
+					<span class="glyphicon glyphicon-cog"></span>
+					<span style="font-family: Arial;"> Primeira vez</span>
+				</button>
 				</br></br>
-				<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-refresh" id="btn_sincronizar"> Sincronizar</button>			
+				<button class="btn btn-info btn_margin btn-lg" id="btn_sincronizar"> 
+					<span class="glyphicon glyphicon-refresh"></span>
+					<span style="font-family: Arial;"> Sincronizar</span>
+				</button>			
 				
             </div>
         </div>		
@@ -111,7 +120,10 @@
 					<ul>
 					<h3><b>No computador:</b></h3></br></br>
 					<h4><li>Clique no botão abaixo para abrir o site do CamStudio em outra aba do navegador.</li></h4></br>		
-					<button class="btn btn-info btn_margin btn-lg glyphicon glyphicon-arrow-right" id="btn_sitecamstudio"> Site do CamStudio</button>
+					<button class="btn btn-info btn_margin btn-lg" id="btn_sitecamstudio"> 						
+						<span class="glyphicon glyphicon-arrow-right"></span>
+						<span style="font-family: Arial;"> Site do CamStudio</span>
+					</button>
 					</ul>
                 </div>						
 				<div id="step-2" class=""></br>
@@ -162,7 +174,9 @@
 					<ul>
 					<h3>Todos os programas necessários no computador estão instalados.
 					</br></br> Clique em "Instalação Smartphone" no menu acima para continuar a instalação no smartphone do participante.</h3></br>
-					<button class="btn btn-success btn_margin btn-lg" id="btn_instalacaosmartphone">Instalação Smartphone</button>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_instalacaosmartphone">
+						<span style="font-family: Arial;"> Instalação Smartphone</span>
+					</button>
 					</ul>     				
 				</div>						
             </div>
@@ -184,15 +198,20 @@
 			    <div id="step-1" class="">					
 					<ul>
 					<h4><li>Abra o "Floating Camera"</li></h4></br>	
-					<h4><li>Clique no botão indicado para trocar a câmera</li></h4></br>					
 					<img src="img/telaFloatingCamera.png" alt="Instalar" class="img">	
-					<img src="img/Floatingcamera01.png" alt="Instalar" class="img">		  
+					<h4><li>Passe pelo tutorial inicial do programa.</li></h4></br>	
+					<img src="img/FloatingCamera-Tutorial01.png" alt="Instalar" class="img">	
+					<img src="img/FloatingCamera-Tutorial02.png" alt="Instalar" class="img">	
+					<img src="img/FloatingCamera-Tutorial03.png" alt="Instalar" class="img">	
+					<img src="img/FloatingCamera-Tutorial04.png" alt="Instalar" class="img">	
 					</ul>
                 </div>
                 <div id="step-2" class=""></br>				
 					<ul>
+					<h4><li>Clique no botão indicado para trocar a câmera</li></h4></br>					
 					<h4><li>Clique no botão indicado para habilitar o preview</li></h4></br>
 					<h4><li>Clique no botão indicado para ativar o Floating Camera</li></h4></br>		
+					<img src="img/Floatingcamera01.png" alt="Instalar" class="img">		  
 					<img src="img/Floatingcamera02.png" alt="Instalar" class="img">				
 					<img src="img/Floatingcamera03.png" alt="Instalar" class="img">		
 					</ul>   
@@ -239,8 +258,11 @@
 				
 				<div id="step-8" class=""></br>                
 					<ul>
-					<h4><li>A sincronização está completa e pronta para iniciar a gravação, utilizando o botão abaixo.</li></h4></br>
-					<button class="btn btn-success btn_margin btn-lg" id="btn_iniciargravacao">Iniciar Gravação</button>					
+					<h4><li>A sincronização está completa e agora você pode introduzir o participante ao teste.</li></h4></br>
+					<h4><li>Antes do participante iniciar suas tarefas, inicie a gravação utilizando o botão abaixo.</li></h4></br>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_iniciargravacao">
+						<span style="font-family: Arial;"> Iniciar Gravação</span>
+					</button>					
 					</ul>   
 					
                 </div>
@@ -277,7 +299,9 @@
 					<ul>
 					<h4><li>O Smartphone do participante está sendo gravado.</li></h4></br>	
 					<h4><li>Caso queira finalizar a gravação, clique no botão "Finalizar gravação".</li></h4></br>		
-					<button class="btn btn-success btn_margin btn-lg" id="btn_finalizargravacao">Finalizar Gravação</button>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_finalizargravacao">
+						<span style="font-family: Arial;"> Finalizar Gravação</span>
+					</button>					
 					</ul>                  
                 </div>
             </div>
@@ -304,7 +328,9 @@
 					<ul>
 					<h4><li>A gravação está finalizada e pronta para ser analisada.</li></h4></br>										
 					<h4><li>Clique no botão "Exibir questionário" para continuar.</li></h4></br>
-					<button class="btn btn-success btn_margin btn-lg" id="btn_exibirquestionario">Exibir Questionário</button>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_exibirquestionario">
+						<span style="font-family: Arial;"> Exibir Questionário</span>
+					</button>
 					</ul>                  
                 </div>
             </div>
@@ -337,7 +363,13 @@
 					<h4><li>Você pode acessar as respostas ao questionário através da tab de "Respostas"</li></h4></br>					
 					<img src="img/inserirQuestionario4.png" alt="Instalar" class="img"></br></br>		
 					<h4><li>Caso você queira realizar outro teste, clique no botão "Reiniciar gravação" no menu acima.</li></h4></br>
-					<button class="btn btn-success btn_margin btn-lg" id="btn_iniciargravacao2">Iniciar Gravação</button>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_iniciargravacao2">
+						<span style="font-family: Arial;"> Iniciar Gravação</span>
+					</button>
+					<h4><li>Caso você terminou todos os testes, clique no botão "Desinstalar" para desabilitar a infraestrutura no smartphone.</li></h4></br>
+					<button class="btn btn-success btn_margin btn-lg" id="btn_desinstalar">
+						<span style="font-family: Arial;"> Desinstalar</span>
+					</button>
 					</ul>                  					
                 </div>
             </div>
@@ -391,8 +423,8 @@
 						<li>Acesse o Google Play Store </li></br>
 						<li>Procure por "AirMore"</li></br></h4>	
 						<h4><li>Entre em "AirMore Video Recorder" da empresa "APOWERSOFT LTD"</li></h4></br>
-						<img src="img/searchResultAirMore.png" alt="Resultado da busca" class="img">										
 						<img src="img/GoogleStoreAirMore.png" alt="Resultado da busca" class="img">				
+						<img src="img/searchResultAirMore.png" alt="Resultado da busca" class="img">
 					   </ul>
 					</div>
 					
@@ -423,17 +455,49 @@
 					</div>		
 					<div id="step-8" class=""></br>
 						<ul>
-						<h4><li>Após o término da instalação, feche o Google Play</li></h4></br>							
+						<h4><li>Após o término da instalação, clique em "Procurar"</li></h4></br>							
+						<h4><li>Procure o aplicativo a ser testado e faça a instalação do aplicativo.</li></h4></br>
 						<img src="img/AbrirFloatingCamera.png" alt="Instalar" class="img">									
 						</ul>
 					</div>								
 					<div id="step-9" class="">	</br>
 						<ul>
 						<h3>Todos os programas necessários estão instalados.
-						</br></br> Clique em "Sincronizar" para sincronizar os programas para habilitar a gravação do teste.</h3></br>
-						<button class="btn btn-success btn_margin btn-lg" id="btn_sincronizar">Sincronizar</button>
+						</br></br> Clique em "Sincronizar" para sincronizar os aplicativos para habilitar a gravação do teste.</h3></br>
+						<button class="btn btn-success btn_margin btn-lg" id="btn_sincronizar2">Sincronizar</button>
 						</ul>     				
 					</div>						
+				</div>
+			</div>
+		</div>
+		
+			<div class="hide" id="desinstalacao">
+			<div id="smartwizard_desinstalacao">
+				<ul>
+					<li><a href="#step-1">Passo 1<br /></a></li>
+					<li><a href="#step-2">Passo 2<br /></a></li>
+					
+				</ul>            
+				<div>
+					<div id="step-1" class="">					
+						<h3><b>No Smartphone:</b></h3></br>
+						<ul>
+						<h4><li>Entre no menu inicial do Android e acesse "Configurar".</li></h4></br>
+						<h4><li>Entre no menu "Programador" e desative a função "Programador".</li></h4></br>					
+						<img src="img/Desinstalacao01.png" alt="Instalar" class="img">														
+						<img src="img/Desinstalacao02.png" alt="Instalar" class="img">														
+						</ul>  
+					</div>
+					<div id="step-2" class="">					
+						<h3><b>No Smartphone:</b></h3></br>
+						<ul>
+						<h4><li>Feche a tela para voltar à tela inicial do Android.</li></h4></br>
+						<h4><li>Desinstale os aplicativos do smartphone, arrastando o ícone respectivo até o botão de "Desinstalar"</li></h4></br>
+						<img src="img/Desinstalacao03.png" alt="Instalar" class="img">														
+						<img src="img/Desinstalacao04.png" alt="Instalar" class="img">														
+						</ul>  
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -480,12 +544,20 @@
 			$("#load_exibirquestionario").on("click", function() {
 				abrirExibirQuestionario();
 			});
+			
+			$("#load_desinstalacao").on("click", function() {
+				abrirDesinstalar();
+			});
 			//
 			$("#btn_instalar").on("click", function() {
 				abrirInstalacao();
 			});
 			//									
 			$("#btn_sincronizar").on("click", function() {
+				abrirSincronizacao();  
+			});
+			
+			$("#btn_sincronizar2").on("click", function() {
 				abrirSincronizacao();  
 			});
 			
@@ -505,10 +577,6 @@
 				abrirInstalacaoSmartphone();
 			});
 			
-			$("#btn_sincronizar").on("click", function() {
-				abrirSincronizacao();
-			});
-			
 			$("#btn_iniciargravacao").on("click", function() {
 				abrirIniciarGravacao();
 			});
@@ -525,7 +593,10 @@
 			$("#btn_exibirquestionario").on("click", function() {
 				abrirExibirQuestionario();
 			});
-				
+			
+			$("#btn_desinstalar").on("click", function() {
+				abrirDesinstalar();
+			});			
 					
             function openInNewTab(url) {
 				var win = window.open(url, '_blank');			
@@ -538,6 +609,7 @@
 				$("#load_iniciargravacao").attr("class", "");
 				$("#load_finalizargravacao").attr("class", "");
 				$("#load_exibirquestionario").attr("class", "");
+				$("#load_desinstalacao").attr("class", "");
 				
 				if(load!="")
 					$(load).attr("class", "white");
@@ -554,6 +626,7 @@
 				$("#instalacaoSmartphone").attr("class", "hide");
 				$("#responderQuestionario").attr("class", "hide");
 				$("#exibirQuestionario").attr("class", "hide");
+				$("#desinstalacao").attr("class", "hide");
 								
 				$("#"+div).attr("class", "col-lg-12");
 			};
@@ -612,6 +685,13 @@
 				abrirDiv("instalacaoSmartphone"); 
 				startWizardInstalacaoSmartphone();
 			} ;
+			
+			function abrirDesinstalar(){ 
+				abrirTexto("");
+				breadCrumb("#load_desinstalacao");
+				abrirDiv("desinstalacao"); 
+				startWizardDesinstalacao();
+			};
 					
 			
 			function startWizardSincronizacao(){
@@ -861,6 +941,44 @@
                     transitionEffect:'fade',
                     toolbarSettings: {toolbarPosition: 'top',
                                       toolbarExtraButtons: [btnFinish, btnCancel, btnProximo]
+                                    }
+                 });
+			};
+			
+			function startWizardDesinstalacao(){
+				
+				abrirTexto("");
+				$('#smartwizard_desinstalacao').smartWizard("reset");
+				
+				$("#smartwizard_desinstalacao").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {               
+               if(stepPosition === 'first'){
+                   $("#prev-btn").addClass('disabled');
+               }else if(stepPosition === 'final'){
+                   $("#next-btn").addClass('disabled');
+               }else{
+                   $("#prev-btn").removeClass('disabled');
+                   $("#next-btn").removeClass('disabled');
+               }
+            });
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Menu inicial')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ abrirInicio(); });
+            var btnCancel = $('<button></button>').text('Reiniciar')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ $('#smartwizard_desinstalacao').smartWizard("reset"); });   
+
+			
+            
+            
+            // Smart Wizard
+            $('#smartwizard_desinstalacao').smartWizard({ 
+                    selected: 0, 
+                    theme: 'default',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'top',
+                                      toolbarExtraButtons: [btnFinish, btnCancel]
                                     }
                  });
 			};
